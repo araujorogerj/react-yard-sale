@@ -1,0 +1,36 @@
+.pag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+    margin-top: 94px;
+}
+
+.notFoundCat{
+    width: 300px;
+    border-radius: 25%;
+    animation: rotation 15s infinite linear;
+    margin-bottom: 16px;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(359deg);
+    }
+}
+
+@media (max-width: 640px){
+    .notFoundCat{
+        width: 250px;
+    }
+}
