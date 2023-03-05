@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/global.css";
-import Navbar from "../components/Navbar";
+import "../styles/home.scss";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="homeContainer">
+      <h1>React Yarn Sale</h1>
     </div>
   );
 };

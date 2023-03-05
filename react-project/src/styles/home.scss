@@ -1,1 +1,10 @@
 @use 'vars';
+
+.homeContainer{
+    margin-top: 61px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: vars.$hospital-green;
+}

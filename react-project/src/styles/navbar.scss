@@ -8,6 +8,8 @@ nav {
     position: fixed;
     top: 0;
     width: 97%;
+    background-color: vars.$white;
+    z-index: 1;
   }
   .menu {
     display: none;

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/global.css";
 import "../styles/login.scss";
 import logo from "../logos/logo_yard_sale.svg";
-import Navbar from "../components/Navbar";
+
 
 const Login = () => {
   return (
