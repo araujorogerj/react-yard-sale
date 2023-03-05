@@ -1,11 +1,15 @@
-@use 'vars';
+@use "vars";
 
-.homeContainer{
-    margin-top: 61px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: vars.$hospital-green;
-    z-index: 0;
+.homeContainer {
+  margin-top: 61px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.title {
+  color: vars.$hospital-green;
+  font-size: vars.$lg;
 }
