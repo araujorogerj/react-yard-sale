@@ -1,0 +1,15 @@
+@use 'vars';
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 640px){
+    .home-logo{
+        display: none;
+    }
+  }

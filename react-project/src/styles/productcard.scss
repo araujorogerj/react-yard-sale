@@ -1,0 +1,62 @@
+@use 'vars';
+
+.product-card {
+    width: 240px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: vars.$hospital-green;
+  }
+  .product-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: solid 1px vars.$text-input-field;
+    
+  }
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .product-info figure {
+    margin: 0;
+  }
+  .product-info figure img {
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+  }
+  .product-info figure img:hover{
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    transition: 0.3s;
+    
+  }
+  .product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: vars.$md;
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: vars.$white;    
+  }
+  .product-info div p:nth-child(2) {
+    font-size: vars.$sm;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: vars.$white;
+  }
+  @media (max-width: 640px) {
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card {
+      width: 140px;
+    }
+    .product-card img {
+      width: 140px;
+      height: 140px;
+    }
+  }
