@@ -46,7 +46,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-      <div className="nav-desktop-menu">
+      <div className="nav-desktop-menu active">
         <DesktopMenu />
       </div>
     </div>
@@ -54,14 +54,14 @@ const Navbar = () => {
 };
 
 function toggleDesktopMenu() {
-  var click = false;
+  var click = true;
 
   if (click === false) {
     document.querySelector(".nav-desktop-menu").classList.toggle("active");
     click = true;
-  } else if (click === true) {
+  } else {
     document.querySelector(".nav-desktop-menu").classList.toggle("active");
-    click = false;
+    click = true;
   }
 }
 export default Navbar;
