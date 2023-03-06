@@ -8,43 +8,60 @@ import DesktopMenu from "../components/DesktopMenu";
 
 const Navbar = () => {
   return (
-    <nav>
-      <img src={menu} alt="menu" className="menu" />
-      <div className="navbar-left">
-        <img src={logo} alt="logo" className="logo" />
-        <ul>
-          <li>
-            <a href="/">All</a>
-          </li>
-          <li>
-            <a href="/">Clothes</a>
-          </li>
-          <li>
-            <a href="/">Electronics</a>
-          </li>
-          <li>
-            <a href="/">Furnitures</a>
-          </li>
-          <li>
-            <a href="/">Toys</a>
-          </li>
-          <li>
-            <a href="/">Others</a>
-          </li>
-        </ul>
+    <div>
+      <nav>
+        <img src={menu} alt="menu" className="menu" />
+        <div className="navbar-left">
+          <img src={logo} alt="logo" className="logo" />
+          <ul>
+            <li>
+              <a href="/">All</a>
+            </li>
+            <li>
+              <a href="/">Clothes</a>
+            </li>
+            <li>
+              <a href="/">Electronics</a>
+            </li>
+            <li>
+              <a href="/">Furnitures</a>
+            </li>
+            <li>
+              <a href="/">Toys</a>
+            </li>
+            <li>
+              <a href="/">Others</a>
+            </li>
+          </ul>
+        </div>
+        <div className="navbar-right">
+          <ul>
+            <li className="navbar-email" onClick={toggleDesktopMenu}>
+              platzi@example.com
+            </li>
+            <li className="navbar-shopping-cart">
+              <img src={shoppingCart} alt="shopping cart" />
+              <div>2</div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div className="nav-desktop-menu">
+        <DesktopMenu />
       </div>
-      <div className="navbar-right">
-        <ul>
-          <li className="navbar-email">platzi@example.com</li>
-          <li className="navbar-shopping-cart">
-            <img src={shoppingCart} alt="shopping cart" />
-            <div>2</div>
-          </li>
-        </ul>
-      </div>
-      <DesktopMenu />
-    </nav>
+    </div>
   );
 };
 
+function toggleDesktopMenu() {
+  var click = false;
+
+  if (click === false) {
+    document.querySelector(".nav-desktop-menu").classList.toggle("active");
+    click = true;
+  } else if (click === true) {
+    document.querySelector(".nav-desktop-menu").classList.toggle("active");
+    click = false;
+  }
+}
 export default Navbar;
