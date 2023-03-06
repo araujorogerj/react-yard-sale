@@ -50,6 +50,9 @@ nav {
     font-size: vars.$sm;
     margin-right: 12px;
   }
+  .navbar-email:hover{
+    cursor: pointer;
+  }
   .navbar-shopping-cart {
     position: relative;
   }

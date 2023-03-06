@@ -1,12 +1,19 @@
 import React from "react";
+import Navbar from "../containers/Navbar";
+import CardsContainer from "../containers/CardsContainer";
+import Logo from "../logos/logo_yard_sale.svg";
 import "../styles/global.css";
 import "../styles/home.scss";
 
 const Home = () => {
   return (
-    <div className="homeContainer">
-      <div className="title">
-        <h1>React Yarn Sale</h1>
+    <div>
+      <Navbar />
+      <div className="homeContainer">
+        <div className="title">
+          <img src={Logo} className="home-logo" alt="logo"/>
+        </div>
+        {/* <CardsContainer /> */}
       </div>
     </div>
   );
