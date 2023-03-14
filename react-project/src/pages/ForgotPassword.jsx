@@ -24,7 +24,7 @@ const Login = () => {
               className="input input-password"
             />
             <label htmlFor="new-password" className="label">
-              Password
+              Repeat Password
             </label>
             <input
               type="password"

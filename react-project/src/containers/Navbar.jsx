@@ -5,12 +5,16 @@ import shoppingCart from "../icons/icon_shopping_cart.svg";
 import "../styles/global.css";
 import "../styles/navbar.scss";
 import DesktopMenu from "../components/DesktopMenu";
+import MobileMenu from "../components/MobileMenu";
 
 const Navbar = () => {
   return (
     <div>
       <nav>
-        <img src={menu} alt="menu" className="menu" />
+        <img src={menu} alt="menu" className="menu" onClick={toggleMobileMenu}/>
+        <div className="mobileMenu inactive">
+          <MobileMenu />
+        </div>
         <div className="navbar-left">
           <img src={logo} alt="logo" className="logo" />
           <ul>
@@ -46,7 +50,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-      <div className="nav-desktop-menu active">
+      <div className="nav-desktop-menu inactive">
         <DesktopMenu />
       </div>
     </div>
@@ -57,10 +61,21 @@ function toggleDesktopMenu() {
   var click = true;
 
   if (click === false) {
-    document.querySelector(".nav-desktop-menu").classList.toggle("active");
+    document.querySelector(".nav-desktop-menu").classList.toggle("inactive");
     click = true;
   } else {
-    document.querySelector(".nav-desktop-menu").classList.toggle("active");
+    document.querySelector(".nav-desktop-menu").classList.toggle("inactive");
+    click = true;
+  }
+}
+
+function toggleMobileMenu() {
+  var click = true;
+  if (click === false) {
+    document.querySelector(".mobileMenu").classList.toggle("inactive");
+    click = true;
+  } else {
+    document.querySelector(".mobileMenu").classList.toggle("inactive");
     click = true;
   }
 }
