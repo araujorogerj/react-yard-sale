@@ -6,8 +6,13 @@ import "../styles/global.css";
 import "../styles/navbar.scss";
 import DesktopMenu from "../components/DesktopMenu";
 import MobileMenu from "../components/MobileMenu";
+import ShoppingCart from "../components/ShoppinCart";
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
+
 
 const Navbar = () => {
+  const { qty, setQty } =useContext(CartContext);
   return (
     <div>
       <nav>
@@ -43,15 +48,18 @@ const Navbar = () => {
             <li className="navbar-email" onClick={toggleDesktopMenu}>
               platzi@example.com
             </li>
-            <li className="navbar-shopping-cart">
+            <li className="navbar-shopping-cart" onClick={toggleShoppingCart}>
               <img src={shoppingCart} alt="shopping cart" />
-              <div>2</div>
+              <div>{qty}</div>
             </li>
           </ul>
         </div>
       </nav>
       <div className="nav-desktop-menu inactive">
         <DesktopMenu />
+      </div>
+      <div className="shopping-cart-desktop inactive">
+        <ShoppingCart />
       </div>
     </div>
   );
@@ -79,4 +87,16 @@ function toggleMobileMenu() {
     click = true;
   }
 }
+
+function toggleShoppingCart() {
+  var click = true;
+  if (click === false) {
+    document.querySelector(".shopping-cart-desktop").classList.toggle("inactive");
+    click = true;
+  } else {
+    document.querySelector(".shopping-cart-desktop").classList.toggle("inactive");
+    click = true;
+  }
+}
+
 export default Navbar;
