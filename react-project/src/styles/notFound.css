@@ -21,6 +21,9 @@
     animation: rotation 15s infinite linear;
     margin-bottom: 16px;
 }
+a{
+    width: 100%;
+}
 
 @keyframes rotation {
     from{
