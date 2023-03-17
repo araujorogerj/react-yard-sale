@@ -1,20 +1,12 @@
-import React from "react";
+import React, { useEffect }  from "react";
 import ProductCard from "../components/ProductCard";
 import '../styles/cardscontainer.scss';
+import { products } from "../functions/api";
 
 const CarsContainer = () => {
   return (
     <section className="main-container">
       <div className="cards-container">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
         <ProductCard />
       </div>
     </section>

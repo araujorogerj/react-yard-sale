@@ -16,7 +16,7 @@ const ShoppingCart = () => {
   return (
     <aside className="product-detail">
       <div className="title-container">
-        <img src={Arrow} alt="arrow" />
+        <img src={Arrow} alt="arrow" className="arrow-img" onClick={toggleShoppingCart}/>
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">
@@ -76,6 +76,21 @@ const ShoppingCart = () => {
     </aside>
   );
 };
+
+function toggleShoppingCart() {
+  var click = true;
+  if (click === false) {
+    document
+      .querySelector(".shopping-cart-desktop")
+      .classList.toggle("inactive");
+    click = true;
+  } else {
+    document
+      .querySelector(".shopping-cart-desktop")
+      .classList.toggle("inactive");
+    click = true;
+  }
+}
 
 
 

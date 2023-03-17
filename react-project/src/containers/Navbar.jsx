@@ -10,13 +10,17 @@ import ShoppingCart from "../components/ShoppinCart";
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
-
 const Navbar = () => {
-  const { qty, setQty } =useContext(CartContext);
+  const { qty, setQty } = useContext(CartContext);
   return (
     <div>
       <nav>
-        <img src={menu} alt="menu" className="menu" onClick={toggleMobileMenu}/>
+        <img
+          src={menu}
+          alt="menu"
+          className="menu"
+          onClick={toggleMobileMenu}
+        />
         <div className="mobileMenu inactive">
           <MobileMenu />
         </div>
@@ -91,10 +95,14 @@ function toggleMobileMenu() {
 function toggleShoppingCart() {
   var click = true;
   if (click === false) {
-    document.querySelector(".shopping-cart-desktop").classList.toggle("inactive");
+    document
+      .querySelector(".shopping-cart-desktop")
+      .classList.toggle("inactive");
     click = true;
   } else {
-    document.querySelector(".shopping-cart-desktop").classList.toggle("inactive");
+    document
+      .querySelector(".shopping-cart-desktop")
+      .classList.toggle("inactive");
     click = true;
   }
 }

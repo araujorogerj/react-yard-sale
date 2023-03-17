@@ -50,6 +50,13 @@
     margin-bottom: 24px;
     align-items: center;
   }
+  .arrow-img{
+    width: 8px;
+    padding: 12px;
+  }
+  .arrow-img:hover{
+    cursor: pointer;
+  }
   .shopping-cart figure {
     margin: 0;
   }
