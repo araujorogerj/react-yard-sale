@@ -1,0 +1,22 @@
+@use 'vars';
+
+.product-page{
+    margin-top: 61px;   
+}
+.products-logo{
+    width: 240px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.logo-container{
+    width: 100%;
+    display: flex;
+    align-items: center;;
+    justify-content: center;
+}
+@media (max-width: 640px){
+    .logo-container{
+        display: none;
+    }
+
+}

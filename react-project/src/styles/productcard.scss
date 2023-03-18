@@ -5,6 +5,7 @@
     border-radius: 20px;
     padding: 5px;
     background-color: vars.$hospital-green;
+    margin-top: 12px;
   }
   .product-card img {
     width: 240px;
@@ -49,11 +50,7 @@
     color: vars.$white;
   }
   @media (max-width: 640px) {
-    .cards-container {
-      grid-template-columns: repeat(auto-fill, 120px);
-      gap: 12px;
-      place-content: center;
-    }
+
     .product-card {
       width: 140px;
     }

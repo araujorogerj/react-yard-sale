@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import LoginPage from "../pages/LoginPage";
+import AllProducts from "../pages/AllProducts";
 import { CartDataProvider } from "../contexts/CartContext.js";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/products" element={<AllProducts />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

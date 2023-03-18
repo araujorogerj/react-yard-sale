@@ -28,7 +28,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="logo" />
           <ul>
             <li>
-              <a href="/">All</a>
+              <a href="/products">All</a>
             </li>
             <li>
               <a href="/">Clothes</a>
