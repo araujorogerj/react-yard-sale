@@ -5,4 +5,9 @@ const products = async (state) => {
   state(peticion.data);
 };
 
-export { products };
+const clothesProducts = async (state) => {
+  const peticion = await axios.get("https://api.escuelajs.co/api/v1/categories/1/products");
+  state(peticion.data);
+};
+
+export { products, clothesProducts };
